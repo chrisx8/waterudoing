@@ -15,10 +15,7 @@ WORKDIR /app
 
 RUN mkdir -p /app/static_serve && \
     chown nobody:nogroup -R /app && \
-    #cp example.env .env && \
     python3 manage.py test 
-    # && \
-    # rm .env example.env site.db
 
 EXPOSE 8000
 USER nobody
