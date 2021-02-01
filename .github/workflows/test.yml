@@ -18,9 +18,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        cp example.env .env
-        python -m pip install -U pip
-        pip install wheel
+        python -m pip install -U pip wheel
         pip install -r requirements.txt
     - name: Set up project
       run: |
