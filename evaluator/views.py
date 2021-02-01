@@ -53,11 +53,11 @@ def result(request, username=None):
     try:
         if username:
             user = User.objects.get(username=username)
-            profile = UserProfile.objects.get(user=user)
         else:
-            profile = UserProfile.objects.get(user=request.user)
+            user = request.user
+        profile = UserProfile.objects.get(user=user)
     except (User.DoesNotExist, UserProfile.DoesNotExist):
-        return render(request, 'error.html', status=400)
+        return render(request, 'error.html', status=404)
     # assign tier and message
     if profile.score > settings.AVG_WEEKLY_WATER_HI * 1.20:
         tier = 'water-u-doing.matlab'
@@ -76,7 +76,7 @@ def result(request, username=None):
         css_class = 'green'
         message = 'Good. Thanks for saving water!'
     context = {
-        'user': request.user.username,
+        'user': user.username,
         'score': profile.score,
         'tier': tier,
         'class': css_class,
