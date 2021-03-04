@@ -1,7 +1,6 @@
 # Water U Doing
 
 [![build](https://github.com/chrisx8/waterudoing/workflows/build/badge.svg)](https://github.com/chrisx8/waterudoing/actions?query=workflow%3Abuild)
-[![CodeFactor](https://www.codefactor.io/repository/github/chrisx8/waterudoing/badge)](https://www.codefactor.io/repository/github/chrisx8/waterudoing)
 
 A fun and interactive way to know your weekly water consumption habits and compete with others on the leaderboard.
 
