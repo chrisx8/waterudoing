@@ -22,7 +22,7 @@ class UserProfile(models.Model):
         ("large", "Large pool"),
     ]
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=False, unique=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=False, unique=True, primary_key=True)
     score = models.IntegerField(null=False)
     weekly_laundry_loads = models.IntegerField(null=False)
     daily_bathroom_trips = models.IntegerField(null=False)
