@@ -16,7 +16,7 @@ Our web app aims to give users the chance to compete with each other. Participan
 
 ## How we built it
 
-We used Django (a Python-based web framework) to develop most of the back-end. Our data was stored using MySQL and SQLite and all the code was running in Docker containers, which are available on Docker Hub. Gunicorn served as a communicator between our web sever and our back-end code, while NGINX was used to serve and distribute the project over the web with proper HTTPS. Most of the front-end was written in HTML/JS/CSS, with the help of frameworks like Dug, Sass, and Bootstrap. We used GitHub and Slack to collaborate. 
+We used Django (a Python-based web framework) to develop most of the back-end. Our data was stored using MySQL and SQLite and all the code was running in Docker containers, which are available on GitHub Container Registry (GHCR). Gunicorn served as a communicator between our web sever and our back-end code, while NGINX was used to serve and distribute the project over the web with proper HTTPS. Most of the front-end was written in HTML/JS/CSS, with the help of frameworks like Dug, Sass, and Bootstrap. We used GitHub and Slack to collaborate.
 
 ## Challenges we ran into
 
